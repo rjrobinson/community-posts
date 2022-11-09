@@ -1,0 +1,123 @@
+<p>There’s a never-ending thirst for achieving a 100% productivity rate. Although that’s practically not possible, achieving one’s maximum productivity level without getting completely exhausted is a realizable goal - a goal that every software development team is striving to actualize.</p>
+
+<p>In that pursuit, a metric is often left out of the equation or not given the due importance that it deserves. And that is cycle time.</p>
+
+
+
+
+<h2>
+  
+  
+  What is cycle time?
+</h2>
+
+<p>Cycle time is the time a development team/a developer takes to complete the work assigned to them. It is calculated from the time the developer begins working on a task till it is completed and shipped to the customer.</p>
+
+<p>For example, the cycle time starts when a developer picks up a work item such as creating a search feature. The cycle time ends when the search feature has been released and is available to the public. </p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--0dBpzuN5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cb2fwalswrwzp2yqn6qw.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--0dBpzuN5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cb2fwalswrwzp2yqn6qw.png" alt="Alt Text"></a></p>
+
+
+
+
+<h2>
+  
+  
+  Why is development cycle time a big deal?
+</h2>
+
+<p>When you measure your team’s cycle time, you not only have the superpower to identify bottlenecks but also to proactively resolve them. When done correctly they can indicate how efficient your software development team really is.</p>
+
+<p>Shorter cycle times mean your development team’s progress is more efficient, smooth, and fast. And that translates to reduced time to market, a better product, and satisfied customers.</p>
+
+
+
+
+<h2>
+  
+  
+  How is cycle time measured?
+</h2>
+
+<p>There are several tools out in the market today that can come in handy to measure cycle time. But if you want a rough calculation of the cycle time, you must simply calculate the difference of time between the start and end date of the process. Or, as the definition states, the difference in time between the developer’s start date to the ship date of the process. </p>
+
+<p>For example, if a developer starts work on the 7th of April and they release the process on the 15th, the cycle time for this process is 8 days.</p>
+
+<p>Cycle time is normally measured in no. of days.</p>
+
+
+
+
+<h2>
+  
+  
+  Is the current industry method of measuring cycle time accurate?
+</h2>
+
+<p>The industry-standard way for measuring development cycle time is by tracking how long it takes for an item to go from the “In Progress” column in a Kanban Board tool to completed and shipped. </p>
+
+<p>But with this method, the accuracy of your development cycle time goes out the window.  </p>
+
+<p>Because this is a process that heavily relies on manually updating the status of work items. And no matter what product or tool you use, we all know there's always that one member who forgets to update progress.</p>
+
+<p>Here are some practical reasons why:</p>
+
+<ul>
+<li>Sometimes, the developer may have completed the task but may have forgotten to update its status.</li>
+<li>Quite often, there have been delays in changing the task’s status due to bottlenecks that go unnoticed.</li>
+<li>There have also been scenarios, though rare, where the developer might begin work on a task even before it’s added to the backlog.</li>
+</ul>
+
+<p>In all these cases mentioned above, your report will have a huge gap that won’t get noticed and hence won’t be accurate. You simply can't blame the developers for these situations or breathe down their necks to make regular updates because they would have more pressing matters on their plate rather than to manually update their progress in the PM tool. </p>
+
+<p>But, since these gaps in cycle times go unnoticed, it becomes next to impossible to identify areas for improvement or single out bottlenecks accurately. </p>
+
+<p>So, how can you calculate software development cycle time accurately?</p>
+
+<p>Combine the data from your project management tool along with the data generated in the tools your development team spends the most time in — Git! </p>
+
+<p><a href="https://zepel.io/solutions/engineering/?utm_source=devto&amp;utm_medium=mid-image&amp;utm_campaign=cycle-time"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--wXWOOCq0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://zepel.io/agile/content/images/2021/04/img-1-2.png" alt="Zepel, dev-friendly project management tool for engineering teams"></a></p>
+
+<p>So, here’s how we do it at Zepel.</p>
+
+<p>We take the data from the developer's home turf - GitHub, GitLab, and Bitbucket. And when the first commit is made for a user story and the developers begin what they love doing - coding, we start calculating the cycle time. </p>
+
+<p>We track the time throughout the different stages such as when a PR is issued, reviewed, and then merged. Finally, we end tracking only after the item has been released. This gives organizations a more accurate cycle time report. </p>
+
+<p>Additionally, we identify bottlenecks and problem areas when a delay occurs. Here’s how👇🏼</p>
+
+
+
+
+<h2>
+  
+  
+  How to identify bottlenecks using cycle time?
+</h2>
+
+<p>Identifying bottlenecks in the earlier stages of development can help proactively resolve them and thereby improve the development process. </p>
+
+<p>But how does cycle time help you do this? </p>
+
+<p>For instance, you have planned a release on the 15th of April and the work begins on the 1st of April. But the work does not get completed on the 15th. The developer(s) working on the feature completes it only on the 20th. </p>
+
+<p>Of course, the <a href="https://zepel.io/agile/reports/cumulative-flow-diagram/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time">cumulative flow diagram</a> of this release will show you the days when your team’s productivity wasn’t that great. It could be possible bottlenecks.</p>
+
+<p>But if you wish to identify bottlenecks, you must measure the cycle time of each stage in the development process. That is, keep an eye on the time taken between the first commit and the PR opened, the time taken from PR opened to PR reviewed, and the time from PR merged to release. </p>
+
+<p>For example, say you’ve planned a release on the 15th of April and the developer(s) makes the first commit on the 1st of April. Now, you know if a PR isn’t issued by the 10th, it’s likely to get delayed. If there’s a delay, then you can identify and resolve the bottleneck immediately. </p>
+
+<p>So, whenever there is a considerable delay in any one of these stages, then that stage likely has a bottleneck that needs immediate attention and resolving to be done.</p>
+
+
+
+
+<p>Zepel is one of the most developer-friendly project management tools with deep git integrations at its heart. It lets you update the progress of your tasks automagically based on your <a href="https://zepel.io/guide/integrations/setup-git-workflow-automation/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time">Git workflow</a>, update teammates on Slack, and get accurate, real-time cycle time reporting so you can improve your software development process. </p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--XYisLgxL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dvd4u89osfqu01lr85gv.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--XYisLgxL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dvd4u89osfqu01lr85gv.png" alt="Alt Text"></a></p>
+
+
+
+
+<p>If you're on the lookout for a project management tool that will make the software development process easy for your team, <a href="https://zepel.io/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time">try Zepel</a>. :) </p>
+

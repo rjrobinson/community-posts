@@ -1,0 +1,75 @@
+<h2>
+  
+  
+  How to get Fitbit data into a Mobile App
+</h2>
+
+<p>Do you have any experience in getting Fitbit sensor Details to your Mobile App? <br>
+ In this article, I'll show you how to use the Fitbit API to fetch Fitbit details into mobile apps.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--DHuVPzxI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mlvrf8fwv7fg344tbbh0.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DHuVPzxI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mlvrf8fwv7fg344tbbh0.png" alt="Image description" width="750" height="296"></a></p>
+
+<h2>
+  
+  
+  Actually, what is Fitbit?
+</h2>
+
+<p><a href="https://www.fitbit.com/global/in/home">Fitbit </a>  is a consumer electronics and fitness firm based in the United States. It develops wireless- enabled wearable technologies, such as physical fitness monitors and activity trackers, as well as related software. Fitbit tracks people's activity, diet, weight, and sleep to help them get in shape, remain motivated, and show how minor changes can have a significant impact.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--QumjmrO_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qyjjmcxt9i3wf7mnpaxi.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--QumjmrO_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qyjjmcxt9i3wf7mnpaxi.png" alt="Image description" width="644" height="659"></a></p>
+
+<h2>
+  
+  
+  Why Developers need <a href="https://dev.fitbit.com/apps/new">Fitbit APIs</a>?
+</h2>
+
+<p>Developers can use the Fitbit API to interact with Fitbit data in their own apps, products, and services. The API provides the majority of the read and write methods required to support your app. </p>
+
+<p>One of my clients requested that I transfer Fitbit account information to his mobile app. He also requested that users who log into his app should receive all the available data from the Fitbit API. He would like to add people's day events to his app in order to suggest activities and provide health results to his users. </p>
+
+<h2>
+  
+  
+  How to get Fitbit data
+</h2>
+
+<p>The client is provided a link to the Fitbit API. To access all of the information on a Fitbit, we must first create an application for it by filling out the form below.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--5_qszauX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vobrjp14q4gna70a3bog.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5_qszauX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vobrjp14q4gna70a3bog.png" alt="Image description" width="305" height="442"></a></p>
+
+<p>After successfully creating the application I tried to get Auth from Fitbit, but I received an Error.</p>
+
+<p>Because of the reason for that error in the Fitbit Application, we need to give the correct redirected URL. After several attempts, I managed to successfully retrieve the data from Fitbit. When we access the Fitbit API, we can choose what we need from a checkbox menu. </p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--9tTxCkiE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5u9kwo2paliq41xpeglp.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9tTxCkiE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5u9kwo2paliq41xpeglp.png" alt="Image description" width="573" height="429"></a></p>
+
+<p>I checked to Allow All because I need my app to get all of the data. After everything is checked, we have to enter a code of the app we created in the API Debug menu of Fitbit. We have to do this ⬇️ to obtain the token.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--U3zYX3PW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7c41vmiaw0kmkmeec8pd.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U3zYX3PW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7c41vmiaw0kmkmeec8pd.png" alt="Image description" width="681" height="486"></a></p>
+
+<p>After inputting all of the information, I must ensure that the data was received accurately. I tried several API testing softwares before discovering the <a href="https://apitester.org/">API Tester</a> mobile app. It has all of the features that a developer requires to work with APIs, so I can finish my work without needing a computer. I can test any kind of API, such as REST, GraphQL, WebSocket, SOAP, JSON RPC, XML, HTTP, and HTTPS, on the move from anywhere in the world, which greatly boosts my productivity. </p>
+
+<p>Finally, we can use API Tester to send a GET request with the </p>
+
+<blockquote>
+<p><a href="https://api.fitbit.com/1/user/-/profile.json">https://api.fitbit.com/1/user/-/profile.json</a></p>
+</blockquote>
+
+<p>endpoint URL and Authorization Header obtained during the token creation step. The Play button in the upper right corner brought up the Response screen, which is very user- friendly and displays all values. There is an option to switch between the Request and Response screens. Also, if necessary, we can share the response by hitting on the share icon.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--jBET_DOo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l1gr9rqgz0jx4fwc05et.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--jBET_DOo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l1gr9rqgz0jx4fwc05et.png" alt="Image description" width="788" height="789"></a></p>
+
+<p>After the work is done with the API Tester, we can send requests to the Fitbit through the Application we created. Then, in the android app, I successfully obtain Clients' required values as JSON.</p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>Overall, I was able to successfully test the Fitbit API with the help of the API Tester. API Tester is a feature-rich mobile API client that can make the life of a developer easier. It provides a simple yet powerful interface with the ability to test APIs and submit requests of various methods.</p>
+
+<p>hope you guy, this article will be helpful to you 🤗</p>
+

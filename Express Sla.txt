@@ -1,0 +1,302 @@
+<h2>
+  
+  
+  Fix the trailing slash redirect once and for all
+</h2>
+
+<p>The fix involves rethinking the static page generation to be named files, instead of folders. Following is how to go about it in Express, then later how to make use of it to fix the problem in Firebase and Netlify.</p>
+
+<h3>
+  
+  
+  Express the physical file
+</h3>
+
+<p>The original out-of-the-box Angular prerendering assumes that we have this line as a route rule:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight typescript"><code><span class="c1">// server.ts</span>
+<span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">*.*</span><span class="dl">'</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="k">static</span><span class="p">(</span><span class="nx">distFolder</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">maxAge</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1y</span><span class="dl">'</span>
+<span class="p">}));</span>
+
+<span class="c1">// All regular routes use the Universal CommonEngine</span>
+<span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">indexHtml</span><span class="p">,</span> <span class="p">...);</span>
+<span class="p">});</span>
+</code></pre>
+
+</div>
+
+
+
+<p>If we serve the browser-only version, then we cannot rely on the <code>res.render</code> to serve the static file. We need to manually do this.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight typescript"><code><span class="c1">// browser-only express server alternative (server.js)</span>
+<span class="c1">// need to find file manually</span>
+<span class="nx">server</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// construct the physical file path, removing any url params</span>
+    <span class="c1">// root/client/{route}/index.html</span>
+    <span class="kd">const</span> <span class="k">static</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">client/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">req</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">;</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/index.html</span><span class="dl">'</span><span class="p">;</span>
+
+    <span class="c1">// using const existsSync = require('fs').existsSync;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">existsSync</span><span class="p">(</span><span class="k">static</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">sendFile</span><span class="p">(</span><span class="k">static</span><span class="p">);</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+    <span class="c1">// else send the usual index</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">sendFile</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="s2">`client/index.html`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>This is the case with all browser-only applications, we always have to find the physical file first.</p>
+
+<p>Note, always take notice that the <code>express.static</code> middleware is <strong>not</strong> serving our prerendered files. The <code>server.get</code> is essential in this setup.</p>
+
+<h3>
+  
+  
+  Express: extensions
+</h3>
+
+<p>I promised you a way to put this to sleep so you can sleep better. And that is by creating <code>route.html</code> files instead of <code>route/index.html</code> files. The pre-renderer cannot be Angular out-of-the-box builder, we previously spoke of creating our out builder, or <a href="https://garage.sekrab.com/posts/prerender-routes-in-express-server-for-angular-part-i">Express server to generate prerendered files</a>. We just need to adjust it to create <code>route.html</code> files instead. Have a look at the express route generated in <a href="https://stackblitz.com/edit/angular-express-prerender?file=host%2Fprerender%2Ffetch-route.js">StackBlitz</a>.</p>
+
+<p>It generates something similar to this:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight plaintext"><code>|--client
+|----projects
+|------1.html
+|----projects.html
+|--index.html
+</code></pre>
+
+</div>
+
+
+
+<p>Now in our Express routes, we expose the client folder for all static assets, passing the <code>extensions</code> attribute to the static middleware.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="c1">// we can now use the static middleware to serve assets</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">distFolder</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">maxAge</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1y</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">html</span><span class="dl">'</span><span class="p">],</span>
+    <span class="c1">// also stop redirecting folders if found</span>
+    <span class="na">redirect</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}));</span>
+</code></pre>
+
+</div>
+
+
+
+<h3>
+  
+  
+  The curious case of express extensions and redirect
+</h3>
+
+<p>Normally, we have a single sub folder with static pages (blog posts) that we are eager to prerender. The URL pattern would be more consistent: <code>/posts/1</code>, <code>/post/2</code> and so on.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight plaintext"><code>|--client
+|----posts
+|-------1.html
+|-------2.html
+// this one is trouble
+|----posts.html
+</code></pre>
+
+</div>
+
+
+
+<p>According to Express docs though, <strong>the trailing slash will kick in first if the folder is found</strong>. Thus, <code>domain/posts</code> will redirect to <code>domain/posts/</code>. Which does not exist. So it moves to the next rule.</p>
+
+<p>To stop it from doing that, you'd think that adding <code>redirect: false</code> should do it. But it does not. It just stops redirecting to the trailing slash version, exhausting the static middleware and moves to the next rule, completely missing <code>/posts.html</code>.</p>
+
+<p><strong>There is no solution to this issue.</strong> Not by design.</p>
+
+<p>Our way around it is to be selective. Why would we prerender the <code>posts</code> list that changes often? We don't need to. Or we may change the route to the posts list? If we think in terms of <a href="https://garage.sekrab.com/posts/how-to-turn-an-angular-app-into-standalone-part-i">standalone components</a> that does not sound so horrible in Angular.</p>
+
+<h2>
+  
+  
+  Firebase: cleanUrls
+</h2>
+
+<p>For these pages to work properly in Firebase hosting, all we need is to change the <code>firebase.json</code> <a href="https://firebase.google.com/docs/hosting/full-config#control_html_extensions">configuration</a> to allow <code>cleanUrls</code>. In addition to that, the <code>domain/posts</code> displayed <code>posts.html</code> correctly without adding a trailing slash.<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight json"><code><span class="err">//</span><span class="w"> </span><span class="err">firebase</span><span class="w"> </span><span class="err">hosting</span><span class="w"> </span><span class="err">config</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"hosting"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"web"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"public"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w">
+        </span><span class="err">//</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">will</span><span class="w"> </span><span class="err">allow</span><span class="w"> </span><span class="err">/posts/</span><span class="mi">1</span><span class="err">.html</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">served</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">/posts/</span><span class="mi">1</span><span class="w">
+    </span><span class="nl">"cleanUrls"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  Netlify
+</h2>
+
+<p>The default behavior of Netlify is to look for <code>route.html</code> files before running rewrite rules in <code>netlify.toml</code> file. So the above solution works well. In addition to that, the <code>domain/posts</code> displayed <code>posts.html</code> correctly without adding a trailing slash.</p>
+
+<blockquote>
+<p>Neither Netlify nor Firebase suffer from the <strong>Express Slashing Syndrome</strong>. ESS. That's whatchamacallit.</p>
+</blockquote>
+
+<h2>
+  
+  
+  Digressing
+</h2>
+
+<p>Going back to our never ending quest to replace Angular localization with one that serves multiple languages in one build, let's try to rewrite some Express rules to fix the trailing slash issue.</p>
+
+<p>Here are the four scenarios you would have read about in the previous series: <a href="https://garage.sekrab.com/posts/alternative-way-to-localize-in-angular">Twisting Angular Localization</a>. And <a href="https://garage.sekrab.com/posts/prerender-routes-in-express-server-for-angular-part-i">Prerendering in Angular</a>.</p>
+
+<h3>
+  
+  
+  Cookie driven app
+</h3>
+
+<p>For a browser-only app, or SSR app, when the language is based on a cookie, the prerendering rules in Express look like this<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="c1">// server/routes.js cookie driven multilingual</span>
+<span class="c1">// serve assets first</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">*.*</span><span class="dl">'</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">client</span><span class="dl">'</span><span class="p">));</span>
+<span class="c1">// use static middleware for all static language urls (generated for prerendering)</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">client/en</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">html</span><span class="dl">'</span><span class="p">]}));</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">client/tr</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">html</span><span class="dl">'</span><span class="p">]}));</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// then serve normally</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/*</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// serve index file for all urls for browser-only</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">sendFile</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="s2">`index/index.</span><span class="p">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">locals</span><span class="p">.</span><span class="nx">lang</span><span class="p">}</span><span class="s2">.html`</span><span class="p">);</span>
+  <span class="c1">// or this for SSR</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="s2">`index/index.</span><span class="p">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">locals</span><span class="p">.</span><span class="nx">lang</span><span class="p">}</span><span class="s2">.html`</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+
+</div>
+
+
+
+<p>We cannot rely on the <code>CommonEngine</code> in this case because the route does not match the physical file path. The physical file is inside a <code>en</code> or <code>tr</code> physical folder, and it ends with an <code>html</code>. We can choose to fetch the physical file ourselves though, instead of the static middleware train.</p>
+
+<h3>
+  
+  
+  URL driven app
+</h3>
+
+<p>When the language is based on the URL, and the physical folder reflects the same URL, but not the file name (<code>route.html</code>)<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="c1">// server/routes.js url driven multilingual</span>
+
+<span class="c1">// use static files in client, we cannot use get("*.*") here</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="dl">'</span><span class="s1">/:lang</span><span class="dl">'</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">client</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">redirect</span><span class="p">:</span> <span class="kc">false</span><span class="p">}));</span>
+
+<span class="c1">// to prerender /lang/route.html, open up client on root,</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">client</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">html</span><span class="dl">'</span><span class="p">],</span> <span class="na">redirect</span><span class="p">:</span> <span class="kc">false</span><span class="p">}));</span>
+
+<span class="c1">// then serve languages as usual</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">languages</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span> <span class="o">=&gt;</span> <span class="s2">`/</span><span class="p">${</span><span class="nx">n</span><span class="p">}</span><span class="s2">/*`</span><span class="p">),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// browser-only</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">sendFile</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="s2">`index/index.</span><span class="p">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">locals</span><span class="p">.</span><span class="nx">lang</span><span class="p">}</span><span class="s2">.url.html`</span><span class="p">);</span>
+  <span class="c1">// or this for ssr</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">rootPath</span> <span class="o">+</span> <span class="s2">`index/index.</span><span class="p">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">locals</span><span class="p">.</span><span class="nx">lang</span><span class="p">}</span><span class="s2">.url.html`</span><span class="p">,</span> <span class="p">{</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+
+</div>
+
+
+
+<p>Note: in all of our attempts to prerender, we rarely talked about the index homepage. The general rule is that it's acceptable to redirect the root to a trailing slash, because the Angular itself will treat the base of the app with an additional slash once hydrated. Thus the client app, and express behavior, are in sync.</p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>What we learned from this series:</p>
+
+<ul>
+<li>  Redirecting and showing up in Google search console as redirect error does not affect searchability</li>
+<li>  The <code>CommonEngine</code> in Angular Universal takes care of displaying the pre-rendered version in all the usual setups</li>
+<li>  In unusual setups, we have two options
+
+<ul>
+<li>  Create <code>route/index.html</code> files, and check physical file before serving root index</li>
+<li>  Create <code>route.html</code> file, and create enough rules to serve it</li>
+<li>  Use hosting configuration like <code>trailingSlash</code> and <code>clearnUrls</code>
+</li>
+</ul>
+
+
+</li>
+<li>  ESS: Express Slashing Syndrome is a real thing y'all!</li>
+</ul>
+
+<p>My final advice: Search Console has a mind of its own, don't sweat over it. Keep creating awesome content, and duck, duck, Go! 😉</p>
+
+<h3>
+  
+  
+  RESOURCES
+</h3>
+
+<ul>
+<li>  <a href="https://firebase.google.com/docs/hosting/full-config#control_html_extensions">Firebase hosting configuration</a>
+</li>
+<li>  <a href="https://expressjs.com/en/4x/api.html#express.static">Express static middleware</a>
+</li>
+<li>  <a href="https://github.com/expressjs/serve-static/issues/138">Extensions vs Directory Express issue</a>
+</li>
+</ul>
+
+<h3>
+  
+  
+  RELATED POSTS
+</h3>
+
+<ul>
+<li><p><a href="https://garage.sekrab.com/posts/prerender-routes-in-express-server-for-angular-part-i">Prerender routes in Express server for Angular - Part I</a></p></li>
+<li><p><a href="https://garage.sekrab.com/posts/serving-multilingual-angular-application-with-expressjs">Serving multilingual Angular application with ExpressJS</a></p></li>
+<li><p><a href="https://garage.sekrab.com/posts/how-to-turn-an-angular-app-into-standalone-part-i">How to turn an Angular app into standalone - Part I</a></p></li>
+</ul>
+

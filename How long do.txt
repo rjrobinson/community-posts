@@ -1,0 +1,37 @@
+<p>C++ is a powerful language that many successful programmers chose and still choose. These days there are many programming languages that are easy to learn and fast to apply but it all hinges on the goal we want to achieve to choose a programming language even now as their first language to learn competitive programming as it offers many edges over Java and Python though it’s a bit hard to know comparatively.</p>
+
+<p>Coding is about how efficiently we can process and implement our logic. However, if you are well-versed in one programming language then it eventually becomes easier to learn any other language and even to learn new skills.</p>
+
+<p>So, if you’re completely new to programming, it’ll take at least 3 months to learn C++. That’s working at least 2 to 3 hours each day. However, if you’ve programmed before, working at least an hour a day, it’ll take 1 to 3 months to grasp the basics.</p>
+
+<p>And if you want to build mastery in C++, it’ll take at least 2 years.</p>
+
+<p>Like any programming language, you need to know how to:</p>
+
+<p>declare variables<br>
+collect user input<br>
+store information<br>
+repeat an action through loops<br>
+write functions to repeat blocks of code<br>
+These are standard.</p>
+
+<p>The reason C++ takes a much longer time to learn is because of its quirks.</p>
+
+<p>Things like:</p>
+
+<p>Memory management<br>
+Reference and Pointers<br>
+Standard template library<br>
+Threads and handling exceptions<br>
+These are powerful concepts to master. But they’ll have you banging your head on the wall.</p>
+
+<p>Over and over.</p>
+
+<p>And after learning them, it doesn’t mean you’re done. As with any language, there’s always something more to learn.</p>
+
+<p>In C++, the more you learn, the more things you see that you don’t know.</p>
+
+<p>And that’s it! My answer swaddles up all the important points you need to take note of to learn C++ in 2021. The new world got updated with screens in watches to use any time that is exceptionally portable doesn’t mean you will throw your PCs away. Old is real. It doesn’t lose its market anytime soon. Grab your books and courses and brush up on your skill set right now!</p>
+
+<p>Hope this helped you!</p>
+

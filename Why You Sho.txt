@@ -1,0 +1,51 @@
+<p>Our concepts of Lead Time and Cycle Time came from the field of Operations Management and Production Engineering. As such, I think it’s beneficial to all of us to maintain coherent with them and use the same semantics in Software Engineering Management as well.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--JlNlOTTK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://sourcelevel.io/wp-content/uploads/Untitled_Diagram.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--JlNlOTTK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://sourcelevel.io/wp-content/uploads/Untitled_Diagram.png" alt=""></a></p>
+
+<h2>
+  
+  
+  Lead Time
+</h2>
+
+<p>Lead time is defined by the amount of time each item takes to pass through the entire process or through only a specific step. So, it’s ok to have several lead times, each serving to a different purpose, each for a different metric or indicator.</p>
+
+<p>Usually, that means it is as easy as <code>end_date - start_date</code> and probably truncating to days or hours, depending on the process you want to monitor.</p>
+
+<h2>
+  
+  
+  Cycle Time
+</h2>
+
+<p>Cycle Time is defined as the time between the output of two successive units of work in a process.</p>
+
+<p>So, it resembles a measurement of frequency. Think “looking at this step, how many items come through in a period?”.</p>
+
+<p>However, given the definition, cycle time is measured as the inverse of frequency. So, when we say cycle time of 1 day, it means that, after one delivery, the next one will be delivered (on average) in 1 day.</p>
+
+<p>I’m not keen on using cycle time. Since so many people don’t know its meaning, I very much prefer using Throughput or other measurements of deliveries over time.</p>
+
+<p>But, there’s one metric that we use in Software Engineering that resembles cycle time: frequency of deploys. When we say “we deploy 12 times per day”, we could also say, “on average, there’s a deploy coming every 2 hours.” I know, not usual to speak that way, but that’s how cycle times would work if we use the original semantics from Operations Management.</p>
+
+<h2>
+  
+  
+  My take on this
+</h2>
+
+<p>I think you should not use cycle time when referring to single items and how many days that item is in the process flow. That’s the definition for lead time!</p>
+
+<p>However, that’s not how the Agile community has been using lead times and cycle times, leading to a whirl of confusion.</p>
+
+<p>So, my tips for anyone measuring software engineering:</p>
+
+<ul>
+<li>Use Lead Times to describe how much time has passed for an item in the process. You can also use averages and percentiles when aggregating individual lead times.</li>
+<li>Don’t use Cycle Times. Using Throughput should give everyone a better understanding.</li>
+</ul>
+
+<p>And you, what terms have you been using?</p>
+
+<p>The post <a href="https://sourcelevel.io/blog/why-you-should-use-lead-time-instead-of-cycle-time">Why You Should Use Lead Time Instead of Cycle Time</a> appeared first on <a href="https://sourcelevel.io">SourceLevel</a>.</p>
+

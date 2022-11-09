@@ -1,0 +1,131 @@
+<p>Cycle time and lead time are two important metrics in software development that get confused with one another more often than not. Being so similar at first glance, I’d only be surprised if you didn’t mix these two terms up. </p>
+
+<p>But at the end of this article, you will not only know to differentiate between cycle and lead time, you will also learn their importance, benefits, and know when to look into which metric. </p>
+
+
+
+
+<h2>
+  
+  
+  Quick overview of cycle time
+</h2>
+
+<p>Cycle time is the time difference between when a developer/ a development unit picks up a user story from the backlog to when they have completed it. That is, it is the duration between moving work items from ‘In progress’ to ‘Done’ on the <a href="https://zepel.io/agile/kanban/what-are-kanban-boards/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">kanban board</a>. </p>
+
+<p>For example, when a developer picks up a work item from the ‘To do’ to build a chat feature and moves it to ‘In Progress’, the cycle time starts. And it ends when the developer completes the chat feature and it is moved to ‘Done’.</p>
+
+<p><em><a href="https://zepel.io/agile/reports/cycle-time/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">Check out this article on Cycle time to get a deep understanding of it</a>.</em>  </p>
+
+
+
+
+<h2>
+  
+  
+  Quick overview of Lead time
+</h2>
+
+<p>Lead time is the time interval from when a user story is created and added to the backlog to when the story is shipped and delivered to the customer. That is, it is the time difference between adding a work item in ‘To do’ to moving the item to ‘Done’.</p>
+
+<p>For example, lead time starts when a work item for building a chat feature is added to the ‘To do’ column of a kanban board. It ends when the work item is moved to ‘Done’ and shipped. </p>
+
+
+
+
+<h2>
+  
+  
+  Difference between cycle and lead time
+</h2>
+
+<h3>
+  
+  
+  1. Definition: Core difference
+</h3>
+
+<p>The core difference between cycle and lead time is very minute and simple.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--8THcXf81--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jogo82rky15386zy62hc.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--8THcXf81--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jogo82rky15386zy62hc.png" alt="Alt Text"></a></p>
+
+<p>As shown in the image above, Cycle time starts when you move a work item to ‘In Progress’ and it ends when the item is moved to ‘Done’. Whereas lead time starts when a work item is added to the backlog and it ends after the item reaches the end-user/customer. </p>
+
+<p>Basically, lead time includes the waiting time of a work item in the backlog while cycle time doesn’t. </p>
+
+<h3>
+  
+  
+  2. Importance and benefits of measuring cycle and lead time
+</h3>
+
+<p>Measuring cycle time enables you to test the efficiency of your development team and identify bottlenecks or problem areas to help improve this efficiency. Thus, you can proactively resolve the bottlenecks with accurate cycle time calculation and painlessly meet deadlines. No more holding your breath and barely meeting deadlines. </p>
+
+<p>By measuring lead time, you can figure out how many item/feature requests are flowing into your backlog and how long your squad takes to check those off. This also helps identify what processes in your software development - from backlog management to delivery, require work. </p>
+
+<p>These two metrics are crucial to understanding your current pace of progress and decipher how to pick up this pace to ensure your customers’ satisfaction. So, keeping your cycle times short helps keep your lead times short and in turn sail through your backlog without chaos.</p>
+
+<h3>
+  
+  
+  3. When to analyze what: cycle time vs lead time
+</h3>
+
+<p>When you want to know the time your development squad takes to roll out features/items, calculating your cycle time helps. You can also identify the problem areas for your development team to improve in the next sprint. </p>
+
+<p>But when you want to test the overall efficiency of your system, the entire development process from backlog creation to delivery, and to know how long your customer needs to wait for a feature/item, turn your focus towards lead time. </p>
+
+<p><em>Tip: Use the <a href="https://zepel.io/agile/reports/cumulative-flow-diagram/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">cumulative flow diagram</a> to analyze cycle and lead time.</em></p>
+
+<h3>
+  
+  
+  4. How they are measured
+</h3>
+
+<p>Although there are plenty of tools in the market to calculate cycle and lead time, understanding how they are calculated can prove helpful while roughly planning releases. </p>
+
+<p><em>Cycle time = developer start date of item - item release date</em></p>
+
+<p><em>Lead time = create item in backlog date - item release date</em></p>
+
+<p>For example, an item is created in the ‘To do’ column on the 1st of April. It gets picked up by a developer and moved to ‘In progress’ on the 7th. And the developer moves it to ‘Done’ on the 15th of April after releasing the item. So, the lead time for this item is 15 days while the cycle time is 8 days. </p>
+
+<p>Measuring cycle and lead time accurately goes beyond simply moving a task on your kanban board from start to finish and then calculating the time difference between them. Because in reality, to err is human and as humans, we often tend to forget to update our progress on the board. And nobody is to blame because being a software development team, there's enough work on each one’s plate that everybody is already working round the clock in a race against time to complete that request before the deadline. </p>
+
+<p>So, how do you calculate cycle and lead time accurately then?</p>
+
+<p>It’s quite straightforward. For cycle time, it is done by combining the data from your project management tool with the data generated in the tools where the dev team practically lives — Git! </p>
+
+<p><a href="https://zepel.io/solutions/engineering/?utm_source=devto&amp;utm_medium=import&amp;utm_campaign=cycle-time"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--wXWOOCq0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://zepel.io/agile/content/images/2021/04/img-1-2.png"></a></p>
+
+<p>At Zepel, we take the data generated in the developer-favourites - <a href="https://zepel.io/integrations/github/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">GitHub</a>, <a href="https://zepel.io/integrations/gitlab/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">GitLab</a>, and <a href="https://zepel.io/integrations/bitbucket/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">Bitbucket</a>. When the dev makes their first commit for a user story, the cycle time clock begins. </p>
+
+<p>Time gets tracked throughout the fun stuff (coding) and through the different stages such as PR issuing, review, and merging. Finally, the clock stops when the item has been delivered. </p>
+
+<p>For instance, the first commit is made for an item on the 1st of April, whose release is planned for the 15th of April. The PR gets issued on the 10th, reviewed on the 12th, and the final merge is made on the 13th. The item gets released in time. This helps you detect bottlenecks immediately and resolve them. </p>
+
+<p>As far as lead time is concerned, there aren’t any accurate ways to measure it. But lead time delays that tend to occur are usually due to handoffs between the product team and the engineering team. Not having sufficient information regarding the context of what customers want adds to this. That is why Zepel has a feature called <a href="https://zepel.io/guide/streams/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">Streams</a> to help with the handoff, reduce delays, and improve lead times. </p>
+
+<p>Streams enables you to gather all your customer requests from various external sources such as Canny, Intercom, etc, prioritize them, and delegate them to respective squads in Zepel. Thus, bridging the gap in the product-engineering handoff. </p>
+
+<p>So, no more waiting for context, no more lead time delays; just plain sailing from start to end. :) </p>
+
+<p>But be it tracking cycle or lead time, you will need a dev-friendly project management tool to help you measure them accurately. Otherwise, you will never know where and how to streamline your development process better.</p>
+
+
+
+
+<p>Zepel is one of the most developer-friendly project management tools in the market. With deep git integrations, your progress updates are made automagically based on your <a href="https://zepel.io/guide/integrations/setup-git-workflow-automation/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">Git workflow</a>. Your squad will also receive instant notifications regarding such progress updates on Slack via the Zepel + Git + Slack workflow setup. </p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--n6MwgnIL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a6ki00pqw9g8vqadnv2z.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--n6MwgnIL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a6ki00pqw9g8vqadnv2z.png" alt="Alt Text"></a></p>
+
+<p>Pick Zepel and get accurate, real-time cycle and lead time reporting.</p>
+
+
+
+
+<p>Looking for a project management tool that will make your software development process easy, efficient, and chaos-free?</p>
+
+<p><a href="https://zepel.io/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">Try Zepel</a>. Or <a href="https://zepel.io/request-demo/?utm_source=devto&amp;utm_medium=text&amp;utm_campaign=cycle-time-vs-lead-time">sign up for a demo</a> to learn more about our tool. No strings attached, we promise. :)</p>
+

@@ -1,0 +1,59 @@
+<p>Delegating consists in decide which developer will get a problem, transform into an issue, read it, understand, code, ship, and resolve it.</p>
+
+<p>Working with a team for a time can turn this into an easier process. But, imagine you are starting a new developing team and don't know how to select the developer for the problems you need to solve it.</p>
+
+<p><strong>Estimating</strong><br>
+You can start estimating those devs preparing issues in different levels of difficulty and abstraction. Get those issues and delegate to calculate and measure the knowledge from your team.</p>
+
+<p>Once calculating this you can leverage the developers and select a person that could have a better match to resolve the problem that you need</p>
+
+<p><strong>Woovi Process</strong><br>
+Inside Woovi, already mentioned <a href="https://dev.to/woovi/shipping-to-production-code-gbg">here</a>, we try to delegate issues based on the following principles: </p>
+
+<p><strong>Developer Level</strong><br>
+<strong>Juniors</strong></p>
+
+<ul>
+<li>They can't handle uncertainty</li>
+<li>The issue should have a short duration, one-day maximum.</li>
+<li>The issue needs to be crystal clear</li>
+<li>The issue needs to have a step-by-step of things that need to be done</li>
+<li>The issue needs to have a test plan with the test cases to check when the issue is done</li>
+</ul>
+
+<p><strong>Mid-Levels</strong></p>
+
+<ul>
+<li>They can handle some uncertainty</li>
+<li>The issue can be of medium duration, 1-week maximum</li>
+<li>The developer defines the step-by-step, and the senior validate if it makes sense</li>
+<li>The developer describes the test plan with the test cases, and the senior developer validates if it makes sense</li>
+</ul>
+
+<p><strong>Seniors</strong></p>
+
+<ul>
+<li>They can handle uncertainty</li>
+<li>The issue can be of long duration, +1 month</li>
+<li>The developer defines the step-by-step, and other seniors can provide feedback</li>
+<li>The developer describes the test plan with the test cases, and other seniors can give feedback</li>
+</ul>
+
+<p>Once estimated the issue's difficulty, we delegate it to a free developer that matches the estimated difficulty level.</p>
+
+<p>Even though this developer may not be at the estimated level, we still delegate to him thinking about improving his skills.</p>
+
+<p>The developer is free to return it to us claiming that it needs to rethink the problem already detailed. Focusing in sharp this problem to find the best solution the team can.</p>
+
+
+
+
+<p><a href="https://woovi.com/">Woovi</a> is a Startup that enables shoppers to pay as they like. To make this possible, Woovi provides instant payment solutions for merchants to accept orders.</p>
+
+<p>If you want to work with us, we are <a href="https://woovi.com/jobs/">hiring</a>!</p>
+
+
+
+
+<p>Photo by <a href="https://unsplash.com/@jamie452?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jamie Street</a> on <a href="https://unsplash.com/s/photos/compass?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+

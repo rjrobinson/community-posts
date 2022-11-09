@@ -1,0 +1,337 @@
+<p>Why do you have 42 tabs open in your browser right now? </p>
+
+<p>A lack of tooling would be the obvious answer, but really you have searched long enough already for the perfect tool that can manage hundreds of tabs.</p>
+
+<p>It didn't really work, did it?</p>
+
+<p>I was at that point too, so I tried something a bit different: </p>
+
+<p>I discussed the topic with my 5 years old nephew, a monster who is adorable but also who is never tired of asking me: <strong>WHY?</strong></p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--u0Cvv3lD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/12QuX1%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--u0Cvv3lD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/12QuX1%2B" alt="" width="772" height="516"></a><br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight plaintext"><code></code></pre>
+
+</div>
+
+
+
+<p>I'm assuming here that my name is Bob.</p>
+
+<h2>
+  
+  
+  🎮  Let's play ?
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--zGFxwkpZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Fcatalystgrowthadvisors.com%252Fwp-content%252Fuploads%252F2016%252F03%252Fwe-are-too-busy.png%26f%3D1%26nofb%3D1%26ipt%3Dffd08d19c819b9928676b522869bf724e5b70064de6e8e1f504483adf23c0f53%26ipo%3Dimages" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zGFxwkpZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Fcatalystgrowthadvisors.com%252Fwp-content%252Fuploads%252F2016%252F03%252Fwe-are-too-busy.png%26f%3D1%26nofb%3D1%26ipt%3Dffd08d19c819b9928676b522869bf724e5b70064de6e8e1f504483adf23c0f53%26ipo%3Dimages" alt="" width="880" height="309"></a></p>
+
+<ul>
+<li>5yo: Uncle Bob! Uncle Bob! 👏🏻 </li>
+<li>Bob: Hello nephew, what's up?</li>
+<li>5yo: Can you play <code>some cool game</code> with me?</li>
+<li>Bob: Unfortunately no, I don't have time, I'm super busy in the last months</li>
+<li>5yo: Oh too bad.</li>
+</ul>
+
+<h2>
+  
+  
+  😣 You have too many tabs opened
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--KFvENbw4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Ftse4.mm.bing.net%252Fth%253Fid%253DOIP.zr9OSWJYEaPt2QyOHwaQCAHoB_%2526pid%253DApi%26f%3D1%26ipt%3Dd18a29699bd8d1e06024d8038fa8f1d22b2902ea1ba82ba266bf9a24b5a9b3b2%26ipo%3Dimages" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--KFvENbw4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Ftse4.mm.bing.net%252Fth%253Fid%253DOIP.zr9OSWJYEaPt2QyOHwaQCAHoB_%2526pid%253DApi%26f%3D1%26ipt%3Dd18a29699bd8d1e06024d8038fa8f1d22b2902ea1ba82ba266bf9a24b5a9b3b2%26ipo%3Dimages" alt="" width="474" height="124"></a></p>
+
+<ul>
+<li>5yo: So why are you busy?</li>
+<li>5yo: Are you cleaning your code once again?</li>
+<li>Bob: No no, my code is always super clean. </li>
+<li>5yo: Sounds cool.</li>
+<li>Bob: It's my tabs that bother me.</li>
+<li>5yo: I don't know what tabs are, but why are they bothering you?</li>
+<li>Bob: I just have too many tabs opened, such an horrible thing...</li>
+<li>5yo: Oh no. So can you explain me what tabs are like I'm five?</li>
+<li>bob: Sure. You remember this browser thing I do most of my work with. It used to be Chrome but I switched to Firefox because Firefox is great and also I don't like tech monopolies.</li>
+<li>5yo: oh yes thanks for that, the Firefox panda is super cute</li>
+<li>Bob: So having too many tabs opened means simply that I have many webpages opened in Firefox.</li>
+<li>5yo: Oh ok. Got it. That doesn't sound so bad, no?</li>
+<li>Bob: If you have two windows with each 5 tabs no it's fine. But I have many many tabs opened!</li>
+<li>5yo: You are funny uncle Bob. How many tabs do you have right now?</li>
+<li>Bob: Well let me see, 16 in a first window 27 in this one, 32 in a third one. So that's... Oh no I also have this minimized window with 25 additional tabs. </li>
+<li>5yo: Ok, but I can only count up to 17, can you count for me?</li>
+<li>Bob: 101 exactly</li>
+<li>5yo: Funny that's like my favorite Walt Disney. I also thought I would be overwhelmed if I had 101 dogs at home.</li>
+<li>Bob: You got it, you smart little boy.</li>
+</ul>
+
+<h2>
+  
+  
+  🤔 Wait but Why?
+</h2>
+
+<ul>
+<li>5yo: But why don't you close all thoser tabs if they are stressing you so much?</li>
+<li>Bob: What?</li>
+<li>5yo: I mean the 101 dogs are cute animals that you have to keep feeding and caring for</li>
+<li>Bob: Yes indeed</li>
+<li>5yo: But for your 101 tabs, why can't you close all of them?</li>
+<li>Bob: Well it's not so simple. I'm very afraid that this could happen actually. Something crashes and I loose my tabs, and Firefox for some reason can't restore them</li>
+</ul>
+
+<h2>
+  
+  
+  💡Tabs are just a list of URLs
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--hSNfw_kp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Fsitechecker.pro%252Fwp-content%252Fuploads%252F2017%252F12%252Furl-structure.jpg%26f%3D1%26nofb%3D1%26ipt%3D39aa87007d343442b9b871f4f28af5712316029b7006e3c1af0a8663675f71d7%26ipo%3Dimages" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--hSNfw_kp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Fsitechecker.pro%252Fwp-content%252Fuploads%252F2017%252F12%252Furl-structure.jpg%26f%3D1%26nofb%3D1%26ipt%3D39aa87007d343442b9b871f4f28af5712316029b7006e3c1af0a8663675f71d7%26ipo%3Dimages" alt="" width="880" height="462"></a>´</p>
+
+<ul>
+<li>5yo: Why would it be bad to close the tabs?</li>
+<li>Bob: Because those 101 tabs are actually 101 URLs that each represent everything I do in the internet in general and in my work in particular.</li>
+<li>5yo: What's an URL?</li>
+<li>Bob: Oh right. Well it's pretty simple and pretty cool at the same time. It's simple because it's the adress you see in the Firefox bar. It's cool because the URL is huge but <em>any</em> part of <em>any</em> webpage can be associated directly with this adress. That's why when you have the right 101 URLs you are one click away of opening exactly the exact thing you need on the internet.</li>
+<li>5yo: Wow, URLs are pretty cool</li>
+<li>Bob: Right and that's why tabs are really cool too by extension.</li>
+<li>5yo: Until you have 101 tabs/URLs and then it's stressing you out?</li>
+<li>Bob: Well. Right. That's my issue I guess.</li>
+</ul>
+
+<h2>
+  
+  
+  😓 Why the stress?
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--D5AL1mWo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Fallhdwallpapers.com%252Fwp-content%252Fuploads%252F2016%252F07%252FZen-4.jpg%26f%3D1%26nofb%3D1%26ipt%3Db27f5ff1337663ba116af8ed5c87efd0dfd76035b0854092dac4003b44ad8e68%26ipo%3Dimages" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--D5AL1mWo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Fallhdwallpapers.com%252Fwp-content%252Fuploads%252F2016%252F07%252FZen-4.jpg%26f%3D1%26nofb%3D1%26ipt%3Db27f5ff1337663ba116af8ed5c87efd0dfd76035b0854092dac4003b44ad8e68%26ipo%3Dimages" alt="" width="880" height="550"></a></p>
+
+<ul>
+<li>5yo: But why are the 101 tabs/URLs stressing you out actually?</li>
+<li>Bob: Well there are a number of reasons. I guess the fear of loosing them and having to start from scratch is one. Also they can consume a lot of computer memory (RAM) and make my computer slow. But mostly the more tabs I have opened, the more I struggle to find the tab I need right now.</li>
+<li>5yo: Sounds like URLs are really cool, but URLs in too many tabs not so much.</li>
+<li>Bob: Well. Right.</li>
+</ul>
+
+<h2>
+  
+  
+  🤔 Can you have the URLs elsewhere and be happy?
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--3-SXHxnH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/t3xc0e%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--3-SXHxnH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/t3xc0e%2B" alt="" width="880" height="283"></a></p>
+
+<ul>
+<li>5yo: But then why don't you put the 101 URLs <em>elsewhere</em>, outside of your browser?</li>
+<li>Bob: Elsewhere?</li>
+<li>5yo: I don't know, you told me that an URL is just this single line of text in the adress bar.</li>
+<li>Bob: Well. Right. Sure therotically I can. I'm just not sure <em>where</em>?</li>
+<li>5yo: What have you tried already?</li>
+<li>Bob: Mmh. Mostly I have tried bookmarks but they have their own set of problems. If you use multiple browser or computer or accounts you loose your bookmarks. And I never managed to organize bookmarks in a hierarchy that makes sense. I prefer tabs over bookmarks.</li>
+<li>5yo: I see. Have you tried something else?</li>
+<li>Bob: Not really, I'm out of ideas already.</li>
+<li>5yo: What kind of URLs do you have anyway?</li>
+<li>Bob: Well that's a good question. I'm not sure. Let me check.</li>
+<li>5yo: OK</li>
+</ul>
+
+<h2>
+  
+  
+  ☑️ The TODO list
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--eaxwBiKe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/uX6UKK%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--eaxwBiKe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/uX6UKK%2B" alt="" width="880" height="310"></a></p>
+
+<ul>
+<li>Bob: So I have like 12 URLs that are little tasks I need to do and don't want to forget</li>
+<li>5yo: Can you put <em>those</em> URLs outside of your too many tabs?</li>
+<li>Bob: Well sure you're right. That's where a good todo list is supposed to help you. I was just too busy to re-organize/simplify my todo list to make it non overwhelming.</li>
+<li>5yo: Cool. What else do you get?</li>
+<li>Bob: Sure, done.</li>
+</ul>
+
+<h2>
+  
+  
+  🔖 The Browser Toolbar
+</h2>
+
+<ul>
+<li>Bob: So some of my URLs are things I access all the time and I want to be acess them quickly, that's why I keep them open.</li>
+<li>5yo: Can you put <em>those</em> URLs outside of your too many tabs?</li>
+<li>Bob: Actually yes, the bookmark bar is supposed to do that. I was just too busy with my too many tabs issue to organize it properly. Making a mental note to do that tomorrow.</li>
+<li>5yo: Cool! What else do you get?</li>
+</ul>
+
+<h2>
+  
+  
+  📚 The Reading List
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--UksSnF8P--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/f87HqV%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--UksSnF8P--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/f87HqV%2B" alt="" width="880" height="510"></a></p>
+
+<ul>
+<li>Bob: So another huge category of URLs that I have is simply articles I want to read but I didn't have time to read yet. There are great authors on DEV.to and wanted to see what kind of work they produce. Also random links I got send via Twitter, Slack, Hacker News, ...</li>
+<li>5yo: Sounds like lot of work</li>
+<li>Bob: Yes</li>
+<li>5yo: Can you put <em>those</em> URLs outside of your too many tabs?</li>
+<li>Bob: Well actually yes again. I can have some sort of reading list of articles I want to read next.</li>
+<li>5yo: Do you know how to do that?</li>
+<li>Bob: I have never really done that yet, but I heard Jean-Michel Fayard telling me that he used the Checkvist keyboard-driven outliner for that with great success. I can surely give it a try.</li>
+<li>5yo: Cool. What else do you get?</li>
+</ul>
+
+<h2>
+  
+  
+  👩🏻‍💼 Work stuff
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--yPI8lP5b--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/8beaUq%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--yPI8lP5b--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/8beaUq%2B" alt="" width="880" height="540"></a></p>
+
+<ul>
+<li>Bob: Well look, in my day to day job, I'm working for <code>some company</code> to investigate <code>some issue</code> . All the information I need is in the internet, but the question is where? So I open lot of tabs.</li>
+<li>5yo: Cool. Can you put <em>those</em> URLs outside of your too many tabs?</li>
+<li>Bob: sure actually. Once I have selected what are the most helpful resources, I can put them in the ticket I'm working on. Or in our internal wiki if that's interesting for the colleagues.</li>
+<li>5yo: Cool. What else do you get?</li>
+</ul>
+
+<h2>
+  
+  
+  👩‍💻 Learning Resources
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--09HFQAhl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/MVEbKO%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--09HFQAhl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/MVEbKO%2B" alt="" width="880" height="394"></a></p>
+
+<ul>
+<li>Bob: Well when I'm learning something, I look for information all over the place to find the best ones and that means having lots of opened tabs. For example right now I'm learning the Kotlin programming language and I have a dozen tabs opened that explain various aspect of it.</li>
+<li>5yo: Cool. Can you put <em>those</em> URLs outside of your too many tabs?</li>
+<li>Bob: Well sure, I can write down my favorite resources and the things I learned in some sort of personal knowledge base. Actually then I can take notes of the cool tricks I am learning with Kotlin. And then I have lots of ideas of what to publish next on DEV.to</li>
+<li>5yo: Do you know how to do that?</li>
+<li>Bob: Yes, Notion or Obsidian.md are great for that. They like Wikiepdia but markdown-based and working offline.</li>
+<li>5yo: Cool. What else do you get?</li>
+</ul>
+
+<h2>
+  
+  
+  ✍🏻 Writings
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--pMCsOeYr--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/553Qly%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--pMCsOeYr--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/553Qly%2B" alt="" width="880" height="384"></a></p>
+
+<ul>
+<li>Bob: Resources I have for writing my next articles. Ok I know what you are going to ask me. Yes I can put them elsewhere. Mostly the same problem and solution than with my programming notes.</li>
+<li>5yo: Cool. What else do you get?</li>
+<li>Bob: That's pretty much it I think. If I moved all those URLs outside of my too-many-tabs I would much less than 101 for sure. And I would probably be less stressed</li>
+<li>5yo: And have time to play with me?</li>
+<li>Bob: Exactly :)</li>
+</ul>
+
+<h2>
+  
+  
+  🐾 A one thousand miles journey begins with a single step
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--_ZKNrBWm--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/q8x8yX%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--_ZKNrBWm--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/q8x8yX%2B" alt="" width="880" height="590"></a></p>
+
+<ul>
+<li>5yo: Do you think you can get started working on your too many tabs problem, like right now?</li>
+<li>Bob: You mean saying goodbye to my beloved 101 tabs I curated with so much love?</li>
+<li>5yo: Yes. I know it's hard but sometimes you have to say thank you but good bye.</li>
+<li>Bob: Right. Let me think.</li>
+<li>5yo: Ok</li>
+<li>Bob: So as a first step I could just export my tabs and put them in a dumb markdown file in my favorite text editor.</li>
+<li>5yo: Ok. Is that hard?</li>
+<li>Bob: The hardest part is to copy paste 101 URLs and titles one by one manually</li>
+<li>5yo: Oh I see. Is there a simpler way to do that?</li>
+<li>Bob: I don't know. Somone on the internet must have had the same issue and found a solution. Let me google that out.</li>
+<li>5yo: OK</li>
+<li>Bob: There you go! I have found the <a href="https://github.com/yorkxin/copy-as-markdown">Copy as Markdown browser extension for Chrome and Firefox</a>. With this I can copy/paste my URLs and page names in markdown format all at once.</li>
+<li>5yo: Congrats, you're smart uncle bob!</li>
+<li>Bob: So the first done is actually done: my 101 URLs are stored safely in a markdown document.</li>
+</ul>
+
+<h2>
+  
+  
+  🙏🏻 Saying Good Bye
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s---uz0V1qa--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/v3n0ix%2B" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s---uz0V1qa--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://share.cleanshot.com/v3n0ix%2B" alt="" width="880" height="587"></a></p>
+
+<ul>
+<li>5yo: So you can close the 101 tabs right now?</li>
+<li>Bob: I can yes. That feels very strange after all those years.</li>
+<li>5yo: Do you want to do it aynyway?</li>
+<li>Bob: Yes. Just let me say goodbye and thank you for all the time we spent together.</li>
+<li>5yo: Yes, goodbye and thank you.</li>
+<li>Bob: Done. </li>
+<li>5yo: Done?</li>
+<li>Bob: Done. Wow, I never had so few tabs opened since years.</li>
+<li>5yo: Must be an interesting feeling.</li>
+<li>Bob. Yes. And yet I can feel that the stress is partially gone already.</li>
+<li>5yo: That sounds good. Do you know what to do next?</li>
+</ul>
+
+<h2>
+  
+  
+  🔜 What's Next?
+</h2>
+
+<ul>
+<li>Bob: Yes, reordering the 101 URLs in the categories we discussed before: Browser bar, TODO list, Reading List, Programming Resources, Writing Resources.</li>
+<li>5yo: Cool. Is that hard? </li>
+<li>Bob: No no that's fine.</li>
+<li>5yo: And what's next?</li>
+<li>Bob: Simply put that information where it really belongs: in the browser bar, in my reading list, in my todo list, in my personal knowledge base</li>
+<li>5yo: Cool. Is that hard?</li>
+<li>Bob: No no don't worry, I will get it done.</li>
+</ul>
+
+<h2>
+  
+  
+  🎮  Let's play ?
+</h2>
+
+<ul>
+<li>5yo: So can I assume you will have time to play with me next week?</li>
+<li>Bob: Yes you smart little boy. Thanks for your help. </li>
+<li>5yo: You're welcome, I really enjoy asking questions. I learned a lot from you today</li>
+<li>Bob: I noticed that. </li>
+</ul>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<ul>
+<li>Bob: I have just one small request for the future</li>
+<li>5yo: Sure, what?</li>
+<li>Bob: Please continue asking questions, I love them. </li>
+<li>5yo: Thanks.</li>
+<li>Bob: But maybe not so much questions every day. That was intense!</li>
+<li>5yo: Sorry uncle Bob, that's the one thing I cannot stop doing. 😈</li>
+<li>Bob: 😅</li>
+<li>5yo: And actually I have questions for the readers of your article too. Can I?</li>
+<li>Bob: Sure thing! Let the others work instead of me, I like it.</li>
+<li>5yo: OK:</li>
+</ul>
+
+<blockquote>
+<p>Dear readers,<br>
+Do you have too many tabs opened right now? How many? What is this "problem" of symptom of? What kind of categories do they represent? Can you put them elsewhere? <br>
+If no why not? What's the hardest part? <br>
+If yes, can you get started today simplifying your life?</p>
+</blockquote>
+

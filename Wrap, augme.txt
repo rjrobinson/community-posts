@@ -1,0 +1,199 @@
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--rGyXtUT0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8z82sz3mbwhph9yovxvz.jpg" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--rGyXtUT0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8z82sz3mbwhph9yovxvz.jpg" alt="Hooks" width="880" height="587"></a></p>
+<a href="https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BD%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D1%80%D0%BE%D0%BF%D1%8B.jpg">HardMediaGroup</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
+
+
+
+
+
+
+<h2>
+  
+  
+  On decoration
+</h2>
+
+<p><a href="https://www.python.org/">Python</a> has a concept called <a href="https://peps.python.org/pep-0318/">Decorator</a> which is a function that takes another function and extends the behavior. In the following script, the <code>timeit</code> decorator is used to measure the execution time of the <code>heavy_computation</code> function:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">target</span><span class="p">):</span>
+        <span class="o">@</span><span class="n">wraps</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="c1"># execute and measure the target run time
+</span>            <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">total_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+            <span class="c1"># print elapsed time
+</span>            <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="n">total_time</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="k">return</span> <span class="n">deco</span>
+
+<span class="o">@</span><span class="n">timeit</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">"Done in {total:.3f} seconds !"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">heavy_computation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># doing some heavy computation !
+</span>    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">heavy_computation</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>Output:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code><span class="nv">$ </span>python <span class="nt">-m</span> <span class="nb">test
+</span>Done <span class="k">in </span>2.001 seconds <span class="o">!</span>
+Result: 54
+
+</code></pre>
+
+</div>
+
+
+
+<p>Besides benchmarking, there are many other cool things that can be done with the Python decorator. For example, the <a href="https://hackersandslackers.com/flask-routes/">Flask</a> and <a href="http://bottlepy.org/docs/dev/">Bottle</a> web frameworks implement routing with decorators.</p>
+
+
+
+
+<h2>
+  
+  
+  Hooking
+</h2>
+
+<p>While decorators are cool, it's worth mentioning that using a decorator is much more intuitive than writing its code. The code is entirely different depending on whether the decorator takes arguments or not.</p>
+
+<p>The following code performs the same task as the previous one, except it is more clear and intuitive:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">hooking</span> <span class="kn">import</span> <span class="n">on_enter</span>
+
+<span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="c1"># execute and measure the target run time
+</span>    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="n">context</span><span class="p">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="p">.</span><span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">total_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+    <span class="c1"># print elapsed time
+</span>    <span class="n">text</span> <span class="o">=</span> <span class="n">context</span><span class="p">.</span><span class="n">config</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span>  <span class="c1"># get 'text' from config data
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="n">total_time</span><span class="p">))</span>
+    <span class="n">context</span><span class="p">.</span><span class="n">target</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="o">@</span><span class="n">on_enter</span><span class="p">(</span><span class="n">timeit</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">"Done in {total:.3f} seconds !"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">heavy_computation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># doing some heavy computation !
+</span>    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">heavy_computation</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>Output:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code><span class="nv">$ </span>python <span class="nt">-m</span> <span class="nb">test
+</span>Done <span class="k">in </span>2.001 seconds <span class="o">!</span>
+Result: 54
+
+</code></pre>
+
+</div>
+
+
+
+<p>The Hooking library used in the code above uses Python decorators to wrap, augment, and override functions and methods. It is a generic <a href="https://en.wikipedia.org/wiki/Hooking">hooking</a> mechanism which is perfect for creating a <strong>plug-in</strong> mechanism for a project, performing <strong>benchmarking</strong> and <strong>debugging</strong>, implementing <strong>routing</strong> in a web framework, et cetera.</p>
+
+
+
+
+<h2>
+  
+  
+  Dual paradigm
+</h2>
+
+<p>Also, it is a dual paradigm hooking mechanism since it supports <strong>tight</strong> and <strong>loose</strong> <a href="https://en.wikipedia.org/wiki/Coupling_(computer_programming)">coupling</a>. The previous code uses the tight coupling paradigm, that's why the <code>timeit</code> hook is directly tied to the target function.</p>
+
+<p>In loose coupling paradigm, targets functions and methods are tagged using a decorator, and hooks are bound to these tags. So when a target is called, the bound hooks are executed upstream or downstream. This paradigm is served by a class designed for pragmatic access via <a href="https://stackoverflow.com/a/38276">class methods</a>. This class can be easily subclassed to group tags by theme for example.</p>
+
+<p>Here is an example of the loose coupling paradigm:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">hooking</span> <span class="kn">import</span> <span class="n">H</span>
+
+<span class="o">@</span><span class="n">H</span><span class="p">.</span><span class="n">tag</span>
+<span class="k">def</span> <span class="nf">heavy_computation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"heavy computation..."</span><span class="p">)</span>
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># doing some heavy computation !
+</span>    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">upstream_hook</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"upstream hook..."</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">downstream_hook</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"downstream hook..."</span><span class="p">)</span>
+
+<span class="c1"># bind upstream_hook and downstream_hook to the "heavy_computation" tag
+</span><span class="n">H</span><span class="p">.</span><span class="n">wrap</span><span class="p">(</span><span class="s">"heavy_computation"</span><span class="p">,</span> <span class="n">upstream_hook</span><span class="p">,</span> <span class="n">downstream_hook</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">heavy_computation</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Result:"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>Output:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight shell"><code><span class="nv">$ </span>python <span class="nt">-m</span> <span class="nb">test
+</span>upstream hook...
+heavy computation...
+downstream hook...
+Result: 54
+
+</code></pre>
+
+</div>
+
+
+
+
+
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>This library is available on <a href="https://github.com/pyrustic/hooking#installation">PyPI</a> and you can play with the <a href="https://github.com/pyrustic/hooking#examples">examples</a> which are on the project's <a href="https://github.com/pyrustic/hooking#readme">README</a>. I would like to know what you <a href="http://sl4.org/crocker.html">think</a> of this project. Your questions, suggestions and criticisms are welcome !</p>
+
+<p>Link to the project: <a href="https://github.com/pyrustic/hooking">https://github.com/pyrustic/hooking</a></p>
+

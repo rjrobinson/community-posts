@@ -1,0 +1,152 @@
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--R1GlMJ7c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vxlyy4bsd8dylsp3cipl.jpg" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--R1GlMJ7c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vxlyy4bsd8dylsp3cipl.jpg" alt="Image description" width="880" height="704"></a></p>
+
+<p>SAAS also known as Software as a service can be created using these softwares which can improve your productivity as a developer. Without wasting much time for the Advanced and upcoming devs, here are some categories and the softwares needed to execute the operations.<br>
+NOTE: Any software or language can be used provided you understand the concepts and their uses. Any suggestion here is just my write up, you can be creative as a Developer.</p>
+
+<ul>
+<li><strong>SERVER SIDE SAAS DEV TOOLS</strong></li>
+</ul>
+
+<ol>
+<li><p>Ruby on Rails (backEnd framework)</p></li>
+<li><p>PostgreSQL (Database)</p></li>
+</ol>
+
+<p><strong>CLIENT SIDE SAAS DEV TOOLS</strong></p>
+
+<ol>
+<li>Bower</li>
+<li>Foundation by Zurb( CSS )</li>
+<li>Angular js. Or React js. (biased)</li>
+</ol>
+
+<p><strong>HOSTING AND SYSTEM ADMINISTRATION</strong></p>
+
+<ol>
+<li>Namecheap------&gt; namecheap.pxf.io/QOkXj9</li>
+</ol>
+
+<p>Affiliate link ☝️☝️</p>
+
+<ol>
+<li>Heroku</li>
+</ol>
+
+<p>You can basically use any Hosting platform to host your product. But go with the cheap for testing them move onto containers like Azure or Aws</p>
+
+<p><strong>PAYMENT API</strong></p>
+
+<ol>
+<li>Stripe</li>
+<li>Payoneer</li>
+<li>PayPal</li>
+<li>Payola</li>
+</ol>
+
+<p><strong>EMAIL</strong></p>
+
+<ol>
+<li>Drip</li>
+<li>MailChimp</li>
+<li>mandrill</li>
+</ol>
+
+<p><strong>TESTING</strong></p>
+
+<p>1.Rspec</p>
+
+<ol>
+<li>Copybara</li>
+<li>Jasmine (with Angularjs)</li>
+<li>Teaspoon</li>
+</ol>
+
+<p><strong>ANALYTICS</strong> </p>
+
+<ol>
+<li>Google Analytics</li>
+<li>Mix panel</li>
+<li>Plausible</li>
+<li>Hotjar</li>
+<li>Inspectlet</li>
+<li>LogRocket (Error reporting service)</li>
+</ol>
+
+<p><strong>WEB DEV TOOLS</strong></p>
+
+<ol>
+<li><p>Responsively(Test your designs on any screen size)</p></li>
+<li><p>Lambda test (test websites on device)</p></li>
+<li><p>Serveless Saas</p></li>
+</ol>
+
+<p><strong>DESIGN TOOLS</strong></p>
+
+<ol>
+<li>Grabient</li>
+<li>Fontjoy (fonts)</li>
+<li>Font of web</li>
+<li>Glaze (landing pages)</li>
+<li>Shuffle (Export landing pages code)</li>
+<li>Paaatterns (vector patterns)</li>
+<li>Brandmarks color wheel (logo designs for UI/UX)</li>
+</ol>
+
+<p><strong>VISUAL BUILDERS</strong></p>
+
+<ol>
+<li>Webflow</li>
+<li>EditorX</li>
+<li>TeleportHQ (self test exported codes)</li>
+<li>BuilderX (create apps for react, flutter)</li>
+</ol>
+
+<p><strong>DESIGN RESOURCES</strong></p>
+
+<ol>
+<li>Fusion Design Bundle</li>
+<li>Uplabs</li>
+<li>Ux Database</li>
+</ol>
+
+<p><strong>COMMUNICATION</strong></p>
+
+<ol>
+<li>Zoho</li>
+<li>MailChimp</li>
+<li>Postmark</li>
+<li>Twilio (build bots)</li>
+<li>Send bird(create user platform)</li>
+<li>Sheets on (build email list)</li>
+</ol>
+
+<p><strong>BACKEND TOOLS</strong></p>
+
+<ol>
+<li>Loader</li>
+<li>Prisma</li>
+<li>Supa base or fire store</li>
+<li>Type sense (add search capabilities)</li>
+</ol>
+
+<p><strong>MARKETING CUSTOMERS</strong></p>
+
+<ul>
+<li><p>Rephrase (Ai writing tool)</p></li>
+<li><p>Add this (add social share buttons)</p></li>
+<li><p>Typeform</p></li>
+</ul>
+
+<p><strong>BILLING AND LEGAL</strong></p>
+
+<ol>
+<li>Paddle(Integrate payments into your platform)</li>
+<li>Xolo</li>
+<li>Bitpay</li>
+<li>Docusign</li>
+</ol>
+
+<p>Leave a comment if you have other suggestions and if you like this post<br>
+You can follow my Facebook page for Tech updates<br>
+<a href="https://www.facebook.com/profile.php?id=100083327077814"></a></p>
+

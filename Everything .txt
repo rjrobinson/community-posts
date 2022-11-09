@@ -1,0 +1,133 @@
+<p>In this blog, I am sharing my learning that are gained from the Week-2 of AZ-104: Microsoft <code>Azure Administrator Bootcamp</code>.</p>
+
+<p>This boot camp is really useful for those who want to pass the AZ-104 exam. It was a great opportunity to participate in the Microsoft Azure AZ-104 Bootcamp hosted by the <code>Azure Developer Community</code> in collaboration with <code>Whizlabs</code> and <code>Reskill</code>.</p>
+
+<p>The Microsoft Azure AZ-104 certification is an administrator-level certification that measures our ability to perform the following technical tasks:</p>
+
+<ul>
+<li>Manage Azure IDs and governance. </li>
+<li>Implement and manage storage. </li>
+<li>Deploy and manage Azure compute resources. </li>
+<li>Configure and manage virtual networks. </li>
+<li>Monitor and protect Azure resources. </li>
+</ul>
+
+<p><strong>Speaker of the session</strong>: Ilyas F (Microsoft MVP| Senior Program Manager| Startup Manager)</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--om8m3Eyl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ulk90jdseypa4zvlpeh9.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--om8m3Eyl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ulk90jdseypa4zvlpeh9.png" alt="AZ-104" width="880" height="491"></a></p>
+
+<p>During the second bootcamp session, I learned the below mentioned topics.</p>
+
+<h2>
+  
+  
+  Configure Azure Active Directory
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--gq8nYvli--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vvr00j9kkt6f7btnewn5.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gq8nYvli--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vvr00j9kkt6f7btnewn5.png" alt="badge 1" width="279" height="238"></a></p>
+
+<p>I have learnt:</p>
+
+<ol>
+<li>Azure Active Directory features and usage. </li>
+<li>Core Azure Active Directory components such as identities, accounts, and tenants. </li>
+<li>Comparing Active Directory domain services with Azure Active Directory. </li>
+<li>Azure Active Directory instance features. </li>
+<li>Identify Azure AD Join features and use cases. </li>
+<li>Features and use cases for Self-Service Password Reset.</li>
+<li>Demo</li>
+</ol>
+
+<h2>
+  
+  
+  Configure user and group accounts
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--wk4RyqRb--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p7akdyy1ragrrv4tlysv.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--wk4RyqRb--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p7akdyy1ragrrv4tlysv.png" alt="badge 2" width="267" height="226"></a></p>
+
+<p>I have learnt:</p>
+
+<ol>
+<li>Configuring user accounts and user account properties. </li>
+<li>Creating a new user account. </li>
+<li>Importing user accounts in bulk with a template. </li>
+<li>Configuring team accounts and assignment types.</li>
+<li>Demo</li>
+</ol>
+
+<h2>
+  
+  
+  Configure subscriptions
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--9vhcRUSq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ysgz9fr45ak7b6fkjohd.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9vhcRUSq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ysgz9fr45ak7b6fkjohd.png" alt="badge 3" width="297" height="244"></a></p>
+
+<p>I have learnt:</p>
+
+<ol>
+<li>Using the correct region to locate Azure services. </li>
+<li>Features and use cases for Azure subscriptions. </li>
+<li>Understand billing and features of different Azure subscriptions. Using the Cost Management product for cost analysis. </li>
+<li>Identify ways to reduce costs.</li>
+<li>Demo</li>
+</ol>
+
+<h2>
+  
+  
+  Configure Azure policy
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--Z85Jehyy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q4613fvwxi327td7xfpe.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Z85Jehyy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q4613fvwxi327td7xfpe.png" alt="badge 4" width="313" height="229"></a></p>
+
+<p>I have learnt:</p>
+
+<ol>
+<li>Creating management groups to target policies and budget spending. </li>
+<li>Implementing Azure policy with policy definitions and initiatives. </li>
+<li>Azure policy coverage and compliance determination.</li>
+<li>Demo</li>
+</ol>
+
+<h2>
+  
+  
+  Configure role-based access control
+</h2>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--L_U51tBf--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wm2zrpk4b12h9t1aav2l.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--L_U51tBf--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wm2zrpk4b12h9t1aav2l.png" alt="badge 5" width="240" height="237"></a></p>
+
+<p>I have learnt:</p>
+
+<ol>
+<li>Role-based access control features and use cases. </li>
+<li>List and create role definitions. </li>
+<li>Creating role assignments. </li>
+<li>Identifying the difference between Azure role-based access control and Azure Active Directory roles. </li>
+<li>Managing access to subscriptions using role-based access control. Reviewing the built-in Azure role-based access control roles.</li>
+<li>Demo</li>
+</ol>
+
+<p>At the end of the session, we have Q &amp; A where I have cleared doubts. Speaker also recommended taking Microsoft learn courses to gain more knowledge.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--l9yXR4HW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zlivs97agmbw4img8lop.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--l9yXR4HW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zlivs97agmbw4img8lop.png" alt="youtube image" width="880" height="414"></a></p>
+
+<p>To learn more about the topics, I have taken the <a href="https://docs.microsoft.com/en-us/learn/paths/az-104-manage-identities-governance/">Microsoft Learning modules</a> and successfully completed as well. Every module is having a knowledge check where we can validate our learning as well.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--Nk5iS6nu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7p0ogjtio4xye7f8a4sc.jpg" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Nk5iS6nu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7p0ogjtio4xye7f8a4sc.jpg" alt="total image" width="880" height="453"></a></p>
+
+<p>In Microsoft Learn courses, they are giving sandbox account where we can do azure exercises to get more familiar with the services. PFB is the sandbox modules.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--Zv7EVfrb--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/phu8n4h2o1t1clvd7ci1.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Zv7EVfrb--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/phu8n4h2o1t1clvd7ci1.png" alt="Sandbox" width="880" height="748"></a></p>
+
+<p>Link to Register for the bootcamp: <a href="https://azdev.reskilll.com/event/Az104%7Edoon">https://azdev.reskilll.com/event/Az104~doon</a></p>
+
+<p>Gratitude for perusing my article till end. I hope you realized something unique today. If you enjoyed this article, then please share to your buddies and if you have suggestions or thoughts to share with me then please write in the comment box.</p>
+
+<p>Follow me and share your thoughts,<br>
+<a href="https://github.com/MakendranG">GitHub</a><br>
+<a href="https://www.linkedin.com/in/makendran/">LinkedIn</a><br>
+<a href="https://twitter.com/MakendranG">Twitter</a></p>
+
